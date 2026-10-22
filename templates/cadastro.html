@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro | FitAgenda Pro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        body { background-color: #121214; color: #e1e1e6; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        .card-custom { background-color: #202024; border: 1px solid #323238; border-radius: 12px; }
+        .btn-purple { background-color: #8257e5; color: white; border: none; }
+        .btn-purple:hover { background-color: #6833c5; color: white; }
+        .form-control { background-color: #121214 !important; border-color: #323238 !important; color: #fff !important; }
+        .form-control:focus { border-color: #8257e5 !important; box-shadow: 0 0 0 0.25rem rgba(130, 87, 229, 0.25) !important; }
+        .text-purple { color: #8257e5; }
+        label { color: #a8a8b3 !important; font-weight: 500; }
+    </style>
+</head>
+<body class="d-flex align-items-center justify-content-center min-vh-100 py-4">
+
+    <div class="card card-custom shadow-lg p-5" style="width: 100%; max-width: 420px;">
+        <div class="text-center mb-4">
+            <span class="text-purple fs-1 d-inline-block mb-2"><i class="bi bi-person-badge"></i></span>
+            <h3 class="fw-bold text-white mb-1">Criar Conta</h3>
+            <p class="text-secondary small">Junte-se ao time FitAgenda</p>
+        </div>
+
+        {% if mensagem %}
+            {{ mensagem | safe }}
+        {% endif %}
+
+        <form method="POST">
+            <div class="mb-3 text-start">
+                <label class="form-label mb-1">Nome Completo</label>
+                <input type="text" name="nome" class="form-control" required placeholder="Seu nome">
+            </div>
+            <div class="mb-3 text-start">
+                <label class="form-label mb-1">WhatsApp</label>
+                <input type="text" name="whatsapp" class="form-control" required placeholder="(00) 00000-0000">
+            </div>
+            <div class="mb-3 text-start">
+                <label class="form-label mb-1">E-mail</label>
+                <input type="email" name="email" class="form-control" required placeholder="seu@email.com">
+            </div>
+            <div class="mb-4 text-start">
+                <label class="form-label mb-1">Senha</label>
+                <input type="password" name="senha" class="form-control" required placeholder="Crie uma senha forte">
+            </div>
+            <button type="submit" class="btn btn-purple w-100 fw-bold py-2 mb-3">Cadastrar</button>
+        </form>
+
+        <div class="text-center mt-2 pt-3 border-top border-secondary">
+            <a href="/" class="text-secondary text-decoration-none small"><i class="bi bi-arrow-left"></i> Voltar ao início</a>
+        </div>
+    </div>
+
+</body>
+</html>
