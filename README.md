@@ -4,7 +4,7 @@ Um sistema web completo de gestão de agendamentos e horários desenvolvido para
 
 ### 🚀 Funcionalidades Principais (MVP)
 * **Autenticação Segura:** Registo e Login de clientes com senhas encriptadas (Werkzeug Security).
-* **Painel Admin Protegido:** Área restrita para gestão de horários, vitrine de vagas e controlo de status de pagamentos.
+* **Painel Admin Protegido:** Área restrita para gestão de horários, vitrine de vagas e controle de status de pagamentos.
 * **Calendário Dinâmico:** Integração com FullCalendar.js para visualização da semana com etiquetas de cores (Livre, Pendente, Pago).
 * **Fluxo de Reservas:** Sistema que evita choque de horários, retirando a vaga da vitrine assim que selecionada e gerando um checkout de pagamento.
 * **Exportação de Relatórios:** Geração automática de relatórios financeiros em Excel utilizando Pandas.
